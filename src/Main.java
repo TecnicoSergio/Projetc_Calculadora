@@ -21,22 +21,22 @@ public class Main {
             calc2.setValor(scan.nextInt());
 
             res.setValor(calc1.getValor() + calc2.getValor());
-            System.out.printf("%nA soma de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
+            System.out.printf("%nO Calculo de %d + %d = %d",calc1.getValor(),calc2.getValor(),res.getValor());
 
 
             //======================================================================
             res.setValor(calc1.getValor() - calc2.getValor());
-            System.out.printf("%nA subtração de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
+            System.out.printf("%nO Calculo de %d - %d =  %d",calc1.getValor(),calc2.getValor(),res.getValor());
 
 
             //=====================================================================
             res.setValor(calc1.getValor() * calc2.getValor());
-            System.out.printf("%nA multiplicação de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
+            System.out.printf("%nO Calculo de %d * %d =  %d",calc1.getValor(),calc2.getValor(),res.getValor());
 
 
             //======================================================================
             res.setValor(calc1.getValor() / calc2.getValor());
-            System.out.printf("%nA divisão de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
+            System.out.printf("%nO Calculo de %d / %d =  %d",calc1.getValor(),calc2.getValor(),res.getValor());
 
 
             //=======================================================================
