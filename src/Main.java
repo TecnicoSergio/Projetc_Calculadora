@@ -6,83 +6,58 @@ import calculadora.Calc;
 public class Main {
     public static void main(String[] args) {
 
-        Calc calc1 = new Calc(12,25, 0, 1);
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("================");
-        System.out.println("Calculadora Simples: ");
-        System.out.println("================");
-
-        System.out.println("[1] - Soma: ");
-        System.out.println("[2] - Multiplicação: ");
-        System.out.println("[3] - Divisão: ");
-        System.out.println("[4] - Subtração: ");
+        Calc calc1 = new Calc();
+        Calc calc2 = new Calc();
+        Calc res = new Calc();
+        String opc = "S";
 
 
-        System.out.println("================================");
-        System.out.println("Escolha a opção:   ");
-        calc1.opcao = calc1.entrada;
-        System.out.println("=================================== ");
+        while (opc.equals("s") || opc.equals("S")){
+            System.out.printf("%nDigite o valor 1: ");
+            calc1.setValor(scan.nextInt());
+            System.out.printf("%nDigite o valor 2: ");
+            calc2.setValor(scan.nextInt());
 
-        switch (calc1.getOpcao()){
-            case 1:
-                System.out.println("Digite o primeiro numero: ");
-                calc1.numero1 = calc1.entrada;
-                System.out.println("Digite o segundo numero: ");
-                calc1.numero2 = calc1.entrada;
-                calc1.res = calc1.numero1 + calc1.numero2;
-                System.out.println("Resultado da Soma é : " + calc1.res);
-                break;
+            res.setValor(calc1.getValor() + calc2.getValor());
+            System.out.printf("%nA soma de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
 
-            case 2:
-                System.out.println("Digite o primeiro numero: ");
-                calc1.numero1 = calc1.entrada;
-                System.out.println("Digite o segundo numero: ");
-                calc1.numero2 = calc1.entrada;
-                calc1.res = calc1.numero1 * calc1.numero2;
-                System.out.println("Resultado da Multiplicação é : " + calc1.res);
-                break;
 
-            case 3:
-                System.out.println("Digite o primeiro numero: ");
-                calc1.numero1 = calc1.entrada;
-                System.out.println("Digite o segundo numero: ");
-                calc1.numero2 = calc1.entrada;
-                calc1.res = calc1.numero1 / calc1.numero2;
-                System.out.println("Resultado da Divisão é : " + calc1.res);
-                break;
+            //======================================================================
+            res.setValor(calc1.getValor() - calc2.getValor());
+            System.out.printf("%nA subtração de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
 
-            case 4:
-                System.out.println("Digite o primeiro numero: ");
-                calc1.numero1 = calc1.entrada;
-                System.out.println("Digite o segundo numero: ");
-                calc1.numero2 = calc1.entrada;
-                calc1.res = calc1.numero1 - calc1.numero2;
-                System.out.println("Resultado da Subtração é : " + calc1.res);
-                break;
-            default:
-                System.out.println("Opção Invalida: ");
-                break;
-        }
-        System.out.println("Deseja fazer nova Operação? [S/N]: ");
-        int Nova = calc1.entrada;
-        if (calc1.opcao == 'S'){
+
+            //=====================================================================
+            res.setValor(calc1.getValor() * calc2.getValor());
+            System.out.printf("%nA multiplicação de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
+
+
+            //======================================================================
+            res.setValor(calc1.getValor() / calc2.getValor());
+            System.out.printf("%nA divisão de %d com %d e igual a %d",calc1.getValor(),calc2.getValor(),res.getValor());
+
+
+            //=======================================================================
+            System.out.printf("%nDeseja calcular outro valor?");
+            opc=scan.next();
+            System.out.printf("%n%n%n%n");
+
 
 
         }
-        else {
-            System.out.println("Fim da Operação ");
 
-        }
-        do {
-            System.out.println("Deseja fazer nova Operação? [S/N]: ");
-            //char Nova;
-            Nova = (char)calc1.entrada;
-            if (Nova == 'N'){
-                System.out.println("Fim da OPeração ");
-                break;
 
-            }
-        }while (true);
+
+
+
+
+
+
+
+
+
 
 
 
